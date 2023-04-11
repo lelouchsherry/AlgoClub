@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" style="-fx-background-color: #fff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.financialPage.FinancialController">
+    <top>
+        <AnchorPane prefHeight="150.0" prefWidth="1424.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="133.0" fitWidth="170.0" layoutX="56.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@logo_white.png" />
+                    </image>
+                </ImageView>
+                <BorderPane layoutX="1060.0" prefHeight="150.0" prefWidth="374.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1026.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <center>
+                        <VBox prefHeight="150.0" prefWidth="363.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" />
+                                        <Button fx:id="userProfileBtn" alignment="TOP_RIGHT" mnemonicParsing="false" prefHeight="30.0" prefWidth="309.0" styleClass="welcomeLabel" stylesheets="@style.css" text="Welcome, ...">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets top="25.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="92.0" prefWidth="341.0">
+                                    <children>
+                                        <Button fx:id="menu1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menuItem" text="Events">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets right="50.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Button fx:id="menu2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-border-color: #18A0FB; -fx-border-width: 0px 0px 2px 0px; -fx-font-weight: bold;" styleClass="menuItem" text="Financial">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets right="50.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                        <Button fx:id="menu3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" styleClass="menuItem" text="Profile">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </center>
+                </BorderPane>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="625.0" prefWidth="1239.0" style="-fx-border-color: #18A0FB; -fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="55.0" layoutY="30.0" text="Financial Report" textFill="#18a0fb" AnchorPane.leftAnchor="55.0">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Button fx:id="reportBtn" layoutX="1067.0" layoutY="24.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="145.0" text="Generate Report " AnchorPane.rightAnchor="82.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            <ListView fx:id="myEvtLists" fixedCellSize="100.0" layoutX="1.0" layoutY="125.0" prefHeight="200.0" prefWidth="961.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
+            <Line endX="1196.4927978515625" endY="-7.62939453125E-6" layoutX="101.0" layoutY="86.0" startX="-100.0" stroke="#18a0fb" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <TextField fx:id="searchBox" layoutX="296.0" layoutY="33.0" prefHeight="26.0" prefWidth="150.0" promptText="Search By Event ID">
+                    <font>
+                        <Font size="14.0" />
+                    </font></TextField>
+                <Button fx:id="searchBtn" layoutX="454.0" layoutY="31.0" mnemonicParsing="false" text="Search" />
+                <Label fx:id="errorMessage" layoutX="297.0" layoutY="12.0" textFill="RED" />
+            <FontAwesomeIconView fx:id="refresh" fill="#18a0fb" glyphName="REFRESH" layoutX="236.0" layoutY="54.0" size="20" style="-fx-cursor: hand;" />
+            </children>
+            <BorderPane.margin>
+                <Insets left="50.0" right="50.0" />
+            </BorderPane.margin>
+        </AnchorPane>
+    </center>
+    <padding>
+        <Insets left="20.0" right="20.0" />
+    </padding>
+</BorderPane>

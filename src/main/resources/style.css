@@ -1,0 +1,106 @@
+.button, .btn {
+    -fx-background-color: #18A0FB;
+    -fx-border-radius: 10px;
+    -fx-text-fill: #fff;
+    -fx-font-size: 15px;
+    -fx-alignment: center;
+}
+
+.button:hover, .btn:hover {
+    -fx-text-fill: #18A0FB;
+    -fx-background-color: #fff;
+    -fx-border-radius: 5px;
+    -fx-border-color: #18A0FB;
+    -fx-cursor: hand;
+}
+
+.menuItem {
+    -fx-background-color: transparent;
+    -fx-border-radius: 0px;
+    -fx-text-fill: #18A0FB;
+}
+
+.menuItem:hover {
+    -fx-border-radius: 0px;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+.emailBtn {
+    -fx-cursor: hand;
+    -glyph-size: 28px;
+    -fx-fill: blue;
+}
+
+.editBtn {
+    -fx-cursor: hand;
+    -glyph-size: 28px;
+    -fx-fill: #18A0FB;
+}
+
+.deleteBtn {
+    -fx-cursor: hand;
+    -glyph-size: 28px;
+    -fx-fill: #ff1744;
+}
+
+.jfx-button{
+    -jfx-disable-visual-focus: true;
+}
+
+.welcomeLabel {
+    -fx-background-color: transparent;
+    -fx-text-fill: #18A0FB;
+}
+
+.welcomeLabel:hover {
+   -fx-font-weight: bold;
+   -fx-border-width: 0px;
+   -fx-cursor: hand;
+}
+
+/* Table CSS */
+.column-header-background {
+    -fx-background-color: #18A0FB;
+}
+
+.column-header, .filler {
+    -fx-background-color: #18A0FB;
+    -fx-size: 40px;
+}
+
+.column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.table-cell {
+    -fx-background-color: #F5F5F5;
+    -fx-alignment: CENTER;
+    -fx-border-color: #F5F5F5;
+}
+
+.list-view .list-cell:even {
+    -fx-background-color: #F5F5F5;
+}
+
+.list-view .list-cell:odd {
+    -fx-background-color: #F5F5F5;
+}
+
+.table-row-cell:filled:selected {
+  -fx-background: -fx-control-inner-background;
+  -fx-background-color: -fx-table-cell-border-color, -fx-background;
+}
+
+.table-row-cell:odd:filled:selected {
+  -fx-background: -fx-control-inner-background-alt;
+}
+
+.list-cell:filled:selected:focused,
+.list-cell:filled:selected,
+.list-cell:even,
+.list-cell:odd {
+  -fx-background-color: transparent;
+}

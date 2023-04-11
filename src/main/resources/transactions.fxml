@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" style="-fx-background-color: #fff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.financialPage.TransactionsController">
+   <top>
+      <AnchorPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Label fx:id="transSubTitle" layoutX="72.0" layoutY="110.0" text="Events / event name" textFill="#18a0fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="userBtn" alignment="TOP_RIGHT" layoutX="1121.0" layoutY="25.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="270.0" styleClass="welcomeLabel" stylesheets="@style.css" text="Welcome, ..." AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <JFXButton fx:id="backBtn" layoutX="58.0" layoutY="35.0" style="-fx-font-size: 15px;" styleClass="menuItem" stylesheets="@style.css" text="Back to “Event Name #1”">
+               <graphic>
+                  <FontAwesomeIconView fill="#18a0fb" glyphName="LONG_ARROW_LEFT" size="30" text="" wrappingWidth="40.0" />
+               </graphic>
+            </JFXButton>
+
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="625.0" prefWidth="1239.0" style="-fx-border-color: #18A0FB; -fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="reportBtn" layoutX="1067.0" layoutY="24.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="145.0" text="Generate Report " AnchorPane.rightAnchor="85.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="newTransBtn" layoutX="889.0" layoutY="24.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="145.0" text="Add Transaction ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="transTitle" layoutX="55.0" layoutY="30.0" text="Event Name #1 - Financial Details" textFill="#18a0fb" AnchorPane.leftAnchor="55.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <TableView fx:id="transTable" fixedCellSize="100.0" layoutX="144.0" layoutY="103.0" prefHeight="547.0" prefWidth="1256.0" stylesheets="@style.css" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="200.0" text="ID" />
+                <TableColumn fx:id="dateCol" prefWidth="220.0" text="Date" />
+                  <TableColumn fx:id="descrCol" prefWidth="410.0" text="Purpose" />
+                  <TableColumn fx:id="costCol" prefWidth="210.0" text="Cost" />
+                  <TableColumn fx:id="actionCol" prefWidth="230.0" text="Action" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <Label fx:id="subTotal" layoutX="853.0" layoutY="585.0" text="Sub-Total" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="50.0" right="50.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+   <padding>
+      <Insets left="20.0" right="20.0" />
+   </padding>
+</BorderPane>

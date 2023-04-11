@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" style="-fx-background-color: #fff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.profilePage.UserModifyController">
+   <top>
+      <AnchorPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Label layoutX="72.0" layoutY="110.0" text="Profiles / User Profile" textFill="#18a0fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="userBtn" alignment="TOP_RIGHT" layoutX="1130.0" layoutY="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="270.0" styleClass="welcomeLabel" stylesheets="@style.css" text="Welcome, ..." AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <JFXButton fx:id="backBtn" layoutX="58.0" layoutY="35.0" style="-fx-font-size: 15px;" styleClass="menuItem" stylesheets="@style.css" text="Back to “Profile”">
+               <graphic>
+                  <FontAwesomeIconView fill="#18a0fb" glyphName="LONG_ARROW_LEFT" size="30" text="" wrappingWidth="40.0" />
+               </graphic>
+            </JFXButton>
+
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="625.0" prefWidth="1239.0" style="-fx-border-color: #18A0FB; -fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane layoutY="109.0" prefHeight="200.0" prefWidth="794.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+               <top>
+                  <Line endX="100.0" startX="-1195.5" startY="-0.5" stroke="#18a0fb" BorderPane.alignment="CENTER" />
+               </top>
+               <left>
+                  <VBox prefHeight="561.0" prefWidth="550.0" spacing="20.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label text="Personal info" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Name" />
+                              <TextField fx:id="nameTF" prefHeight="31.0" prefWidth="400.0" promptText="Name">
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="51.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Pronouns" />
+                              <TextField fx:id="pronounsTF" prefWidth="400.0" promptText="Pronouns">
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="51.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Address" />
+                              <TextField fx:id="addressTF" prefWidth="400.0" promptText="Address">
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="51.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Phone" />
+                              <TextField fx:id="phoneTF" prefWidth="400.0" promptText="Phone">
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="51.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Email" />
+                              <TextField fx:id="emailTF" prefWidth="400.0" promptText="Email">
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#updateUser" prefHeight="35.0" prefWidth="150.0" text="Update">
+                           <VBox.margin>
+                              <Insets left="180.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets left="50.0" top="50.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </left>
+               <right>
+                  <VBox prefHeight="200.0" prefWidth="550.0" spacing="30.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox fx:id="idBox" alignment="CENTER_LEFT">
+                           <children>
+                              <Label text="ID" />
+                              <TextField fx:id="idTF" prefHeight="31.0" prefWidth="400.0" promptText="ID">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="roleBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label text="Role" />
+                              <MenuButton fx:id="roleSelect" mnemonicParsing="false" text="Role">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#selectedMgr" text="Manager" />
+                                  <MenuItem mnemonicParsing="false" onAction="#selectedAdmin" text="Admin" />
+                                </items>
+                                 <HBox.margin>
+                                    <Insets left="36.0" />
+                                 </HBox.margin>
+                              </MenuButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label text="Username" />
+                              <TextField fx:id="usernameTF" prefHeight="31.0" prefWidth="400.0" promptText="username">
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="112.0">
+                           <children>
+                              <Label text="Password" />
+                              <TextField fx:id="passwordTF" prefHeight="31.0" prefWidth="400.0" promptText="password">
+                                 <HBox.margin>
+                                    <Insets left="6.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <Button fx:id="editBtn" mnemonicParsing="false" onAction="#editUser" prefHeight="35.0" prefWidth="150.0" text="Edit">
+                           <VBox.margin>
+                              <Insets left="180.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets right="50.0" top="50.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </right>
+               <bottom>
+                  <AnchorPane prefHeight="200.0" prefWidth="1298.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="submitBtn" mnemonicParsing="false" onAction="#createUser" prefHeight="35.0" prefWidth="150.0" text="Submit" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="50.0" />
+                     </children>
+                  </AnchorPane>
+               </bottom>
+            </BorderPane>
+            <Label layoutX="55.0" layoutY="30.0" text="User Profile" textFill="#18a0fb" AnchorPane.leftAnchor="55.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets left="50.0" right="50.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+   <padding>
+      <Insets left="20.0" right="20.0" />
+   </padding>
+</BorderPane>

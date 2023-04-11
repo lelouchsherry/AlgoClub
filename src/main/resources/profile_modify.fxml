@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" style="-fx-background-color: #fff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.profilePage.ModifyProfileController">
+   <top>
+      <AnchorPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Label fx:id="studentSubTitle" layoutX="72.0" layoutY="110.0" text="Profiles / Student Profile" textFill="#18a0fb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="userBtn" alignment="TOP_RIGHT" layoutX="1130.0" layoutY="40.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="270.0" styleClass="welcomeLabel" stylesheets="@style.css" text="Welcome, ..." AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <JFXButton fx:id="backBtn" layoutX="58.0" layoutY="35.0" style="-fx-font-size: 15px;" styleClass="menuItem" stylesheets="@style.css" text="Back to “Profile”">
+               <graphic>
+                  <FontAwesomeIconView fill="#18a0fb" glyphName="LONG_ARROW_LEFT" size="30" text="" wrappingWidth="40.0" />
+               </graphic>
+            </JFXButton>
+
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="658.0" prefWidth="1301.0" style="-fx-border-color: #18A0FB; -fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="studentName" alignment="CENTER" layoutX="57.0" layoutY="30.0" prefHeight="32.0" prefWidth="165.0" text="Student Profile" textFill="#18a0fb" AnchorPane.leftAnchor="56.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Line endX="1196.5999755859375" endY="-7.62939453125E-6" layoutX="102.0" layoutY="86.0" startX="-100.0" stroke="#18a0fb" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
+            <Button fx:id="newUserBtn" layoutX="1048.0" layoutY="28.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="145.0" text="Create New User" AnchorPane.rightAnchor="85.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <BorderPane layoutX="2.0" layoutY="87.0" prefHeight="595.0" prefWidth="1301.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+               <left>
+                  <VBox prefWidth="590.0" spacing="10.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="50.0" top="50.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <Label text="Student Name">
+                           <VBox.margin>
+                              <Insets left="50.0" top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="studentNameTF" prefHeight="31.0" prefWidth="498.0">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="Pronouns">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="studentPronounsTF" prefHeight="31.0" prefWidth="498.0">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="Student Address">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="studentAddressTF" prefHeight="31.0" prefWidth="498.0">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="Student Phone">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="studentPhoneTF" prefHeight="31.0" prefWidth="498.0">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="Student Email">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="studentEmailTF" prefHeight="31.0" prefWidth="498.0">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets top="-30.0" />
+                     </padding>
+                  </VBox>
+               </left>
+               <right>
+                  <VBox prefWidth="605.0" spacing="10.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets right="50.0" top="50.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <Label text="Guardian Name">
+                           <VBox.margin>
+                              <Insets left="50.0" top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="guardianNameTF">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="Guardian Phone">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="guardianPhoneTF">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label text="Relationship">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="relationshipTF">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets top="-30.0" />
+                     </padding>
+                  </VBox>
+               </right>
+               <bottom>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="studentProfileSubmitBtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" stylesheets="@style.css" text="Submit" AnchorPane.leftAnchor="580.0" AnchorPane.topAnchor="50.0" />
+                     </children>
+                  </AnchorPane>
+               </bottom>
+            </BorderPane>
+         </children>
+         <BorderPane.margin>
+            <Insets left="50.0" right="50.0" top="50.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+   <padding>
+      <Insets left="20.0" right="20.0" />
+   </padding>
+</BorderPane>

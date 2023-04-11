@@ -1,0 +1,86 @@
+DROP SCHEMA IF EXISTS algoclub;
+CREATE SCHEMA algoclub;
+USE algoclub;
+
+DROP TABLE IF EXISTS Admin;
+DROP TABLE IF EXISTS Manager;
+DROP TABLE IF EXISTS User;
+
+DROP TABLE IF EXISTS Student;
+DROP TABLE IF EXISTS Event;
+DROP TABLE IF EXISTS Participant;
+DROP TABLE IF EXISTS Financial;
+
+CREATE TABLE Admin
+(Admin_ID int NOT NULL PRIMARY KEY,
+Admin_Name VARCHAR(45),
+Pronouns VARCHAR(10),
+Admin_Address VARCHAR(45),
+Admin_Phone CHAR(10),
+Admin_Email VARCHAR(60)
+);
+
+CREATE TABLE Manager
+(Manager_ID int NOT NULL PRIMARY KEY,
+Manager_Name VARCHAR(45),
+Pronouns VARCHAR(10),
+Manager_Address VARCHAR(45),
+Manager_Phone CHAR(10),
+Manager_Email VARCHAR(50)
+);
+
+CREATE TABLE User
+(User_ID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Admin_ID int,
+Manager_ID int,
+User_Name VARCHAR(45) UNIQUE,
+Password VARCHAR(45),
+Role VARCHAR(10) NOT NULL,
+FOREIGN KEY (Admin_ID) REFERENCES Admin(Admin_ID)
+ON DELETE CASCADE,
+FOREIGN KEY (Manager_ID) REFERENCES Manager(Manager_ID)
+ON DELETE CASCADE
+);
+
+CREATE TABLE Student
+(Student_ID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Student_Name VARCHAR(45),
+Pronouns VARCHAR(10),
+Student_Address VARCHAR(45),
+Student_Phone CHAR(10),
+Student_Email VARCHAR(50),
+Guardian_Name VARCHAR(45),
+Guardian_Phone CHAR(10),
+Relationship VARCHAR(20)
+);
+
+CREATE TABLE Event
+(Event_ID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Manager_ID int NOT NULL,
+Event_Name VARCHAR(45),
+Event_Location VARCHAR(45),
+Event_Date DATETIME,
+Event_Description VARCHAR(200),
+FOREIGN KEY (Manager_ID) REFERENCES Manager(Manager_ID)
+ON DELETE CASCADE
+);
+
+CREATE TABLE Participant
+(Event_ID int NOT NULL,
+Student_ID int NOT NULL,
+CONSTRAINT PK_Participant PRIMARY KEY (Event_ID, Student_ID),
+FOREIGN KEY (Event_ID) REFERENCES Event(Event_ID)
+ON DELETE CASCADE,
+FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID)
+ON DELETE CASCADE
+);
+
+CREATE TABLE Financial
+(Transaction_ID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Event_ID int NOT NULL,
+Transaction_Description VARCHAR(100),
+Cost DECIMAL(8,2),
+Transaction_Date Date,
+FOREIGN KEY (Event_ID) REFERENCES Event(Event_ID)
+ON DELETE CASCADE
+); 
